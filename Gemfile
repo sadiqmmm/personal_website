@@ -5,9 +5,9 @@ gem 'jquery-rails'
 gem 'devise'
 gem "omniauth-twitter"
 gem "omniauth-github"
-gem 'omniauth-google'
 gem 'omniauth-facebook'
 gem "figaro"
+gem "httparty"
 
 
 group :development do

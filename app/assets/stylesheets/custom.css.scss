@@ -28,10 +28,21 @@ a{
   }
 }
 
+textarea{
+  resize: none;
+}
+
+.title-divider h3{
+  font-size: 24px;
+  float: left;
+  font-family: 'Dosis', sans-serif;
+  margin: 0 10px 0 0;
+}
+
 #top-section{
   background-color: #333;
   min-height: 80px;
-  border-bottom: 3px solid #83a400;
+  border-bottom: 3px solid $green;
   .sign-in-btn{
     margin-top: 25px;
   }
@@ -52,9 +63,17 @@ a{
   }
 
   .user-avatar{
-    border: 1px solid #83a400;
+    border: 1px solid $green;
     height: 48px;
     width: 48px;
+  }
+}
+
+#white-footer{
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  #info-footer{
+    margin-top: 15px;
   }
 }
 
@@ -91,4 +110,12 @@ a{
 .fc-webicon.spotify.small{
   margin-bottom: -5px !important;
 }
+
+#footer{
+  border-top: 3px solid $green;
+  background-image: url(/assets/top-menu-bg.gif);
+  min-height: 40px;
+}
+
+
 

@@ -65,6 +65,9 @@ GEM
       railties (>= 3.1)
     hashie (1.2.0)
     hike (1.2.1)
+    httparty (0.10.2)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     httpauth (0.2.0)
     i18n (0.6.4)
     journey (1.0.4)
@@ -80,6 +83,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.7.2)
+    multi_xml (0.5.3)
     multipart-post (1.2.0)
     oauth (0.4.7)
     oauth2 (0.8.1)
@@ -96,10 +100,6 @@ GEM
     omniauth-github (1.1.0)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.1)
-    omniauth-google (1.0.2)
-      multi_json
-      omniauth (~> 1.0)
-      omniauth-oauth
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -170,10 +170,10 @@ DEPENDENCIES
   figaro
   font-awesome-rails
   foundation-social-web-icons-rails!
+  httparty
   jquery-rails
   omniauth-facebook
   omniauth-github
-  omniauth-google
   omniauth-twitter
   pg
   rails (= 3.2.11)

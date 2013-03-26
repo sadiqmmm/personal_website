@@ -1,0 +1,9 @@
+<ul class="thumbnails">
+  <% @instagram_pictures.each_with_index do |picture, index| %>
+    <li class="span4" <% if index % 3 == 0%>style="margin-left: 0px;"<% end %>>
+      <a href="<%= picture[1] %>" class="thumbnail" target="_blank">
+        <%= image_tag picture[0] %>
+      </a>
+    </li>
+  <% end %>
+</ul>
