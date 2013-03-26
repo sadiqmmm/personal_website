@@ -4,6 +4,8 @@ $green: #83a400;
 $customGray: #dfdfdf;
 $navbarBackgroud: $customGray;
 $navbarBackgroundHighlight: $customGray;
+$navbarLinkBackgroundActive: #ddd;
+$navbarLinkColorActive: $green;
 $linkColor: $green;
 $linkColorHover: #333;
 
@@ -26,6 +28,12 @@ $linkColorHover: #333;
 @media (min-width: 980px){
   #wrapper{
     padding-top: 83px;
+  }
+}
+
+@media (max-width: 979px){
+  #wrapper{
+    padding-top: 0px;
   }
 }
 
@@ -63,11 +71,18 @@ input:focus, textarea:focus{
   border-radius: 0px;
 }
 
-.title-divider h3{
-  font-size: 24px;
-  float: left;
-  font-family: 'Dosis', sans-serif;
-  margin: 0 10px 0 0;
+.title-divider {
+  .divider-arrow {
+    height: 45px;
+    overflow: hidden;
+    background: url(../assets/title-divider.gif) repeat-x 0 50%;
+  }
+  h3{
+    font-size: 24px;
+    float: left;
+    font-family: 'Dosis', sans-serif;
+    margin: 0 10px 0 0;
+  }
 }
 
 #top-section{
