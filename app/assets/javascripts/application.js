@@ -15,3 +15,8 @@
 //= require_tree .
 // Loads all Bootstrap javascripts
 //= require bootstrap
+
+$(document).ready(function(){
+  $('a[data-toggle="tooltip"]').tooltip();
+  $('a[data-toggle="popover"]').popover();
+});

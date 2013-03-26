@@ -2,3 +2,93 @@
 @import "bootstrap-responsive";
 @import "font-awesome";
 @import "foundation-social-web-icons";
+
+/* Variables */
+$green: #83a400;
+
+/* Responsive */
+@media (min-width: 980px){
+  #wrapper{
+    padding-top: 83px;
+  }
+}
+
+/* Code */
+
+body{
+  background-image: url("/assets/background.gif");
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+
+a{
+  color: $green;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+#top-section{
+  background-color: #333;
+  min-height: 80px;
+  border-bottom: 3px solid #83a400;
+  .sign-in-btn{
+    margin-top: 25px;
+  }
+
+  .logged-in-btn{
+    margin-top: 15px;
+    text-align: right;
+  }
+
+  .root-link{
+    margin-top: 10px;
+    span{
+      font-size: 28px;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+
+  .user-avatar{
+    border: 1px solid #83a400;
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.field_with_errors{
+  input, textarea{
+    border: 1px solid red;
+  }
+}
+
+.social-links{
+  li a{
+    padding-top: 5px !important;
+    padding-bottom: 0px !important;
+
+  }
+  li .icon-twitter-sign:hover{
+    color: #3bd0fb;
+  }
+
+  li .icon-github-sign:hover{
+    color: #333;
+  }
+
+  li .icon-pinterest-sign:hover{
+    color: #c52026;
+  }
+
+  li .icon-linkedin-sign:hover{
+    color: #4492c2;
+  }
+}
+
+
+.fc-webicon.spotify.small{
+  margin-bottom: -5px !important;
+}
+

@@ -1,0 +1,54 @@
+<section id="top-section" class="navbar-fixed-top">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span9">
+        <div class="root-link">
+          <%= link_to root_path do %>
+            <%= image_tag "jorge-coca.png" %>
+            <span> Jorge Coca</span>
+          <% end %>
+        </div>
+      </div>
+      <div class="span3">
+        <% if user_signed_in? %>
+          <div class="logged-in-btn">
+            <%= image_tag current_user.avatar_url, class: "img-circle user-avatar" %>
+            <%= link_to "Log out #{current_user.name}", destroy_user_session_path, method: :delete, class: "btn btn-mini btn-danger" %>
+          </div>
+        <% else %>
+          <a href="#sign-in-modal" class="btn btn-success btn-block sign-in-btn" data-toggle="modal">
+            <i class="icon-white icon-user"></i> Sign In
+          </a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="sign-in-modal" class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Sign in options</h3>
+  </div>
+  <div class="modal-body">
+    <p>In order to comment on this website, you need first to log in using one of this methods:</p>
+    <p>
+      <%= link_to user_omniauth_authorize_path(:github), class: "btn btn-block btn-large" do %>
+        <i class="icon-github"></i> Sign in with your Github account
+      <% end %>
+    </p>
+    <p>
+      <%= link_to user_omniauth_authorize_path(:facebook), class: "btn btn-block btn-large btn-primary" do %>
+        <i class="icon-facebook"></i> Sign in with your Facebook account
+      <% end %>
+    </p>
+    <p>
+      <%= link_to user_omniauth_authorize_path(:twitter), class: "btn btn-block btn-large btn-inverse" do %>
+        <i class="icon-twitter"></i> Sign in with your Twitter account
+      <% end %>
+    </p>
+  </div>
+  <div class="modal-footer">
+    <%= link_to "Terms & Conditions", "#" %>
+  </div>
+</div>

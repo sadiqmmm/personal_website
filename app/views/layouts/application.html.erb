@@ -8,7 +8,16 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= render "layouts/top_navbar" %>
+
+  <div class="container" id="wrapper">
+    <div class="row-fluid">
+      <div class="span12">
+        <%= render "layouts/top_white_navbar" %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
