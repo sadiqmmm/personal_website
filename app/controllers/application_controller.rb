@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
 
   def global_variables
     @instagram_pictures = InstagramWrapper.user_recent_media
+    @contact_me_message = Message.new
   end
 end

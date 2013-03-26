@@ -1,1 +1,15 @@
-Ola ke ase
+<%= form_for(@contact_me_message) do |f| %>
+  <%= render "shared/error_messages", object: @contact_me_message %>
+  <div class="controls">
+    <%= f.text_field :name, placeholder: "Your name", class: "span12" %>
+  </div>
+  <div class="controls">
+    <%= f.text_field :email, placeholder: "Your email", class: "span12" %>
+  </div>
+  <div class="controls">
+    <%= f.text_area :message, placeholder: "Message", class: "span12", rows: 11 %>
+  </div>
+  <div class="controls">
+    <%= f.submit "Submit", class: "btn btn-success btn-large" %>
+  </div>
+<% end %>

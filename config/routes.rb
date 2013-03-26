@@ -1,5 +1,7 @@
 PersonalWebsite::Application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+
+  resources :messages, only: :create # Contact Me
   
   get "static_pages/home"
 
