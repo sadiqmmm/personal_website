@@ -16,3 +16,8 @@
 
 # Configuration files
 /config/application.yml
+
+# Ignore all precompile assets
+/app/assets/stylesheets/.*
+/app/assets/stylesheets/*.css
+!/app/assets/stylesheets/application.css
