@@ -20,5 +20,5 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass', '~> 2.3.1.0'
   gem "font-awesome-rails"
-  gem 'foundation-icons-sass-rails'
+  gem 'foundation-social-web-icons-rails', git: "git://github.com/jclusso/foundation-social-web-icons-rails.git"
 end
