@@ -22,5 +22,3 @@
 /app/assets/stylesheets/*.css
 !/app/assets/stylesheets/application.css
 
-# Google Analytics
-/app/views/layouts/_analytics.html.erb
