@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
   end
 
   def administrator
-    current_user.administrator
+    unless current_user.administrator
+      flash[:error] = "You don't have permissions to perform the action."
+      redirect_to root_url
+    end
   end
+  
 end
