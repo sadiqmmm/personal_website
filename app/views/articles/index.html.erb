@@ -1,0 +1,27 @@
+<%= content_for :title, @selected_category ? @selected_category : "Articles" %>
+
+<% if @selected_category %>
+  <div class="row-fluid">
+    <div class="span12">
+      <ul class="breadcrumb">
+        <li>
+          <%= link_to root_path do %>
+            <i class="icon-home"></i> Home
+          <% end %>  
+          <span class="divider">/</span>
+        </li>
+        <li><%= link_to "Articles", root_path %> <span class="divider">/</span></li>
+        <li class="active"><%= @selected_category %></li>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<div class="row-fluid">
+  <div class="span8">
+    <%= render "articles" %>
+  </div>
+  <div class="span4">
+    <%= render "sidebar" %>
+  </div>
+</div>

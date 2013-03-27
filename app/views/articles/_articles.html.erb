@@ -1,0 +1,13 @@
+<% @articles.each do |article| %>
+  <div class="row-fluid">
+    <div class="span12">
+      <h1><%= article.title %></h1>
+      <p class="summary">
+        <%= article.summary %>
+      </p>
+      <div class="article-content">
+        <%= article.content %>
+      </div>
+    </div>
+  </div>
+<% end %>
