@@ -4,6 +4,7 @@ PersonalWebsite::Application.routes.draw do
 
   resources :messages, only: :create # Contact Me
   resources :songs, only: [:index, :new, :create]
+  resources :categories, only: [:new, :create]
   
   get "static_pages/home"
 

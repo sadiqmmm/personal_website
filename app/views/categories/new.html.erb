@@ -1,0 +1,14 @@
+<h1>New Category</h1>
+
+<%= form_for @category do |f| %>
+  <%= render "shared/error_messages", object: @category %>
+  <div class="control-group">
+    <%= f.label :name, class: "control-label" %>
+    <div class="controls">
+      <%= f.text_field :name, class: "input-block-level" %>
+    </div>
+  </div>
+  <div class="controls">
+    <%= f.submit "Create Category", class: "btn btn-success btn-large btn-block" %>
+  </div>
+<% end %>
