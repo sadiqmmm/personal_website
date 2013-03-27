@@ -28,14 +28,25 @@
 
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active"><%= link_to "Home", root_path %></li>
+            <li class="<%= 'active' if params[:action] == 'home' %>"><%= link_to "Home", root_path %></li>
             <li><%= link_to "Articles", "#" %></li>
             <li><%= link_to "Projects", "#" %></li>
-            <li>
+            <li class="<%= 'active' if params[:controller] == 'songs' %>">
               <%= link_to "#song-of-the-day", "data-toggle" => "modal" do %>
                 <i class="fc-webicon spotify small"></i> Song of the day
               <% end %>
             </li>
+            <% if user_signed_in? and current_user.administrator %>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Admin Menu <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "New Song", new_song_path %></li>
+                  <li><%= link_to "New Category", new_category_path %></li>
+                </ul>
+              </li>
+            <% end %>
           </ul>
         </div>
 
