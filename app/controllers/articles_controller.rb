@@ -5,9 +5,9 @@ class ArticlesController < ApplicationController
 
   def index
     if params[:category_id].nil? or params[:category_id].empty?
-      @articles = Article.order("created_at DESC")
+      @articles = Article.order("created_at DESC").paginate(page: params[:page], per_page: 6)
     else
-      @articles = Category.find(params[:category_id]).articles.order("created_at DESC")
+      @articles = Category.find(params[:category_id]).articles.order("created_at DESC").paginate(page: params[:page], per_page: 6)
     end
   end
 

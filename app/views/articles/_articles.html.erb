@@ -1,7 +1,10 @@
 <% @articles.each do |article| %>
   <div class="row-fluid">
     <div class="span12">
-      <h1><%= article.title %></h1>
+      <h1><%= link_to article.title, article %></h1>
+      <div>
+        <%= image_tag article.picture %>
+      </div>
       <p class="summary">
         <%= article.summary %>
       </p>

@@ -4,9 +4,9 @@ PersonalWebsite::Application.routes.draw do
 
   resources :messages, only: :create # Contact Me
   resources :songs, only: [:index, :new, :create]
-  resources :articles
+  resources :articles, except: :destroy
   resources :categories, only: [:new, :create] do
-    resources :articles
+    resources :articles, only: [:index, :show]
   end
   
   get "static_pages/home"

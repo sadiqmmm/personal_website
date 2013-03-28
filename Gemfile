@@ -10,6 +10,8 @@ gem "figaro"
 gem "httparty"
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
+gem 'paperclip'
+gem 'paperclip-dropbox'
 
 
 group :development do
