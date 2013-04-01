@@ -1,0 +1,26 @@
+<ul class="nav nav-tabs" id="articles-and-comments">
+  <li class="active">
+    <a href="#more-articles">More Articles</a>
+  </li>
+  <li>
+    <a href="#last-comments">Last Comments</a>
+  </li>
+</ul>
+ 
+<div class="tab-content">
+  <div class="tab-pane active" id="more-articles">
+    <ul>
+      <% @more_articles.each do |article| %>
+        <li>
+          <%= link_to article.title, article %>
+          <p>
+            <i class="icon-calendar"></i> <%= article.created_at.strftime("%d %b. %Y") %> | <i class="icon-comment"></i> 99 comments
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="tab-pane" id="last-comments">
+    Ke ase
+  </div>
+</div>

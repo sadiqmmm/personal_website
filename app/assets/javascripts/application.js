@@ -19,4 +19,8 @@
 $(document).ready(function(){
   $('a[data-toggle="tooltip"]').tooltip();
   $('a[data-toggle="popover"]').popover();
+  $('#articles-and-comments a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+  });
 });
