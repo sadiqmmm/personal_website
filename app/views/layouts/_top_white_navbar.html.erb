@@ -63,7 +63,7 @@
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
       <h3><%= @song_of_the_day.artist %> - <%= @song_of_the_day.title %></h3>
     </div>
-    <div class="modal-body" style="text-align: center; max-height: 90px">
+    <div class="modal-body" style="text-align: center; max-height: 90px; overflow: hidden;">
       <%= spotify_player(@song_of_the_day.spotify_link) %>
     </div>
     <div class="modal-footer">

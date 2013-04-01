@@ -9,7 +9,12 @@
         <%= article.summary %>
       </p>
       <div class="article-content">
-        <%= article.content %>
+        <%= truncate_html article.content, length: 500, omission: "...(continued)" %>
+      </div>
+      <div class="read-more" style="margin-top: 15px; margin-bottom: 15px; text-align: right;">
+        <%= link_to article, class: "btn btn-success" do %>
+          <i class="icon-eye-open"></i> Read More
+        <% end %>
       </div>
     </div>
   </div>
