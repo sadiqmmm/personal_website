@@ -13,5 +13,6 @@ class Article < ActiveRecord::Base
 
   has_attached_file :picture,
     storage: :dropbox,
+    styles: { header: "770x400!" },
     dropbox_credentials: "#{Rails.root}/config/dropbox.yml"
 end

@@ -37,6 +37,21 @@ $linkColorHover: #333;
   }
 }
 
+.carousel{
+  .carousel-indicators .active{
+    background-color: $green !important;
+  }
+  .carousel-inner{
+    border-radius: 20px;
+  }
+  .carousel-control{
+    font-size: 40px !important;
+  }
+  a:hover{
+    color: white;
+  }
+}
+
 /* Code */
 
 body{
