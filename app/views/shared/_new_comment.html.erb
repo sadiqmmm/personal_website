@@ -1,0 +1,21 @@
+<div class="row-fluid">
+  <div class="span12">
+    <% if user_signed_in? %>
+      <%= form_for(@new_comment, url: comments_path, remote: true) do |f| %>
+        <%= f.hidden_field :article_id, value: @article.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <div class="control-group">
+          <%= f.text_area :content, class: "span12", rows: 3, placeholder: "Type your comment here" %>
+        </div>
+        <div class="control-group">
+          <%= f.submit "Post Comment", class: "btn btn-success", id:"new-comment-btn" %>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        To add a comment, sign in first.
+      </div>
+    <% end %>
+  </div>
+</div>

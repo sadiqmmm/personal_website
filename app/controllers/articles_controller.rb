@@ -27,6 +27,8 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @new_comment = Comment.new
+    @comments = @article.comments.order("created_at DESC").paginate(page: params[:page], per_page: 20)
   end
 
   def edit

@@ -1,0 +1,13 @@
+<% @comments.each_with_index do |comment, index| %>
+  <div class="row-fluid">
+    <div class="span12">
+        <blockquote>
+          <p>
+            <%= image_tag comment.user.avatar_url, class: "user-avatar" %>
+            <%= comment.content %>
+          </p>
+          <small><%= comment.user.name %> | <%= time_ago_in_words comment.created_at %> ago</small>
+        </blockquote>
+    </div>
+  </div>
+<% end %>

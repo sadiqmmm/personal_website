@@ -10,7 +10,12 @@
       <div class="item <% if index == 0 %>active <% end %>">
         <%= image_tag article.picture(:header) %>
         <div class="carousel-caption">
-          <h4><%= link_to article.title, article %></h4>
+          <h4>
+            <%= link_to article.title, article %> | 
+            <%= link_to article_path( article, anchor: "comments") do %>
+              <i class="icon-comment"></i> <%= pluralize( article.comments.count, "comment") %>
+            <% end %>
+          </h4>
           <p><%= article.summary %></p>
         </div>
       </div>

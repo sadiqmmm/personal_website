@@ -4,6 +4,7 @@ class Article < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   belongs_to :category
+  has_many :comments
 
   attr_accessible :content, :summary, :title, :category_id, :picture
 
