@@ -1,6 +1,5 @@
 <%= content_for :title, @article.title %>
 
-
 <div class="row-fluid">
   <div class="span8">
     <h1><%= @article.title %></h1>
@@ -8,7 +7,7 @@
       <i class="icon-calendar"></i> <%= @article.created_at.strftime("%d %b. %Y") %> | 
       <%= link_to article_path(@article, anchor: "comments") do %>
         <i class="icon-comment"></i> <%= pluralize(@article.comments.count, "comment") %>
-      <% end %>
+      <% end %> | <i class="icon-group"></i> Visits: <%= @article.visits %>
     </p>
     <div>
       <%= image_tag @article.picture(:header) %>

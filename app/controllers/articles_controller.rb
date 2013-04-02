@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
   before_filter :administrator, except: [:index, :show]
   before_filter :sidebar, only: [:index, :show]
+  after_filter :count_visits, only: :show
 
   def index
     if params[:category_id].nil? or params[:category_id].empty?
@@ -49,5 +50,10 @@ class ArticlesController < ApplicationController
   def sidebar
     @selected_category = params[:category_id] ? Category.find(params[:category_id]).name : nil
     @categories = Category.order("name")
+    @last_comments = Comment.order("created_at DESC").limit(10)
+  end
+
+  def count_visits
+    @article.increment!(:visits)
   end
 end

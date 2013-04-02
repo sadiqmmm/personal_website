@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
     @instagram_pictures = InstagramWrapper.user_recent_media
     @contact_me_message = Message.new
     @song_of_the_day = Song.order("created_at DESC").first
+    @more_articles = Article.order("visits DESC").limit(7)
   end
 
   def administrator
