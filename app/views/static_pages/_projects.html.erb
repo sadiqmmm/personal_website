@@ -1,27 +1,38 @@
 <ul class="thumbnails">
   <li class="span6">
-    <div class="thumbnail">  
-    <img src="http://placehold.it/570x400/990066/ffffff&text=Puppet+Camp">
-  </div>
+    <%= link_to "https://github.com/jorgecoca/personal_website", target: "_blank" do %>
+      <div class="thumbnail">  
+        <img src="http://placehold.it/570x400/cccccc/83a400&text=This+Blog">
+      </div>
+    <% end %>
   </li>
   <li class="span3">
     <div class="thumbnail">
-<img src="http://placehold.it/285x200/83a400/ffffff&text=This+Blog">
-</div>
+      <img src="http://placehold.it/285x200/83a400/ffffff&text=Jorge+Coca+Android+App">
+    </div>
   </li>
   <li class="span3">
     <div class="thumbnail">
-<img src="http://placehold.it/285x200/ffffff/83a400&text=Jorge+Coca+iOS+App">
-</div>
+      <img src="http://placehold.it/285x200/ffffff/83a400&text=Jorge+Coca+iOS+App">
+    </div>
   </li>
   <li class="span3">
     <div class="thumbnail">
-<img src="http://placehold.it/285x200">
-</div>
+      <img src="http://placehold.it/285x200/990066/ffffff&text=Puppet+Camp">
+    </div>
   </li>
   <li class="span3">
     <div class="thumbnail">
-<img src="http://placehold.it/285x200">
-</div>
+      <img src="http://placehold.it/285x200/a49180/ffffff&text=Boxen">
+    </div>
   </li>
 </ul>
+<div class="pagination pull-right">
+  <ul>
+    <li>
+      <%= link_to "#" do %>
+        <i class="icon-cogs"></i> See all projects
+      <% end %>
+    </li>
+  </ul>
+</div>

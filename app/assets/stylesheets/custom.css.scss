@@ -35,6 +35,16 @@ $linkColorHover: #333;
   #wrapper{
     padding-top: 0px;
   }
+  .logged-in-btn{
+    text-align: left !important;
+    margin-bottom: 10px;
+  }
+  .sign-in-btn{
+    width: 200px !important;
+  }
+  #instagram-wrapper{
+    display: none;
+  }
 }
 
 .carousel{
@@ -176,6 +186,7 @@ input:focus, textarea:focus{
   border-top: 3px solid $green;
   background-image: url(/assets/top-menu-bg.gif);
   min-height: 40px;
+  width: 100%;
 }
 
 .summary{
