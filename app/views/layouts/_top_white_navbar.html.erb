@@ -30,7 +30,7 @@
           <ul class="nav">
             <li class="<%= 'active' if params[:action] == 'home' %>"><%= link_to "Home", root_path %></li>
             <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to "Articles", articles_path %></li>
-            <li><%= link_to "Projects", "#" %></li>
+            <li class="<%= 'active' if params[:controller] == 'projects' %>"><%= link_to "Projects", projects_path %></li>
             <li class="<%= 'active' if params[:controller] == 'songs' %>">
               <%= link_to "#song-of-the-day", "data-toggle" => "modal" do %>
                 <i class="fc-webicon spotify small"></i> Song of the day
@@ -45,6 +45,7 @@
                   <li><%= link_to "New Song", new_song_path %></li>
                   <li><%= link_to "New Category", new_category_path %></li>
                   <li><%= link_to "New Article", new_article_path %></li>
+                  <li><%= link_to "New Project", new_project_path %></li>
                 </ul>
               </li>
             <% end %>

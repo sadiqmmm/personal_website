@@ -1,36 +1,28 @@
 <ul class="thumbnails">
-  <li class="span6">
-    <%= link_to "https://github.com/jorgecoca/personal_website", target: "_blank" do %>
-      <div class="thumbnail">  
-        <img src="http://placehold.it/570x400/cccccc/83a400&text=This+Blog">
-      </div>
+  <% @last_projects.each_with_index do |project, index| %>
+    <% if index == 0 %>
+      <li class="span6">
+        <%= link_to project.url, target: "_blank" do %>
+          <div class="thumbnail">
+            <%= image_tag project.picture(:main) %>
+          </div>
+        <% end %>
+      </li>
+    <% else %>
+      <li class="span3">
+        <%= link_to project.url, target: "_blank" do %>
+          <div class="thumbnail">
+            <%= image_tag project.picture(:thumbnail) %>
+          </div>
+        <% end %>
+      </li>
     <% end %>
-  </li>
-  <li class="span3">
-    <div class="thumbnail">
-      <img src="http://placehold.it/285x200/83a400/ffffff&text=Jorge+Coca+Android+App">
-    </div>
-  </li>
-  <li class="span3">
-    <div class="thumbnail">
-      <img src="http://placehold.it/285x200/ffffff/83a400&text=Jorge+Coca+iOS+App">
-    </div>
-  </li>
-  <li class="span3">
-    <div class="thumbnail">
-      <img src="http://placehold.it/285x200/990066/ffffff&text=Puppet+Camp">
-    </div>
-  </li>
-  <li class="span3">
-    <div class="thumbnail">
-      <img src="http://placehold.it/285x200/a49180/ffffff&text=Boxen">
-    </div>
-  </li>
+  <% end %>
 </ul>
 <div class="pagination pull-right">
   <ul>
     <li>
-      <%= link_to "#" do %>
+      <%= link_to projects_path do %>
         <i class="icon-cogs"></i> See all projects
       <% end %>
     </li>

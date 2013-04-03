@@ -9,6 +9,7 @@ PersonalWebsite::Application.routes.draw do
     resources :articles, only: [:index, :show]
   end
   resources :comments, only: [:index, :new, :create]
+  resources :projects, only: [:index, :new, :create, :edit, :update]
   
   get "static_pages/home"
 
