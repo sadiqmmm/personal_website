@@ -9,6 +9,18 @@ $navbarLinkColorActive: $green;
 $linkColor: $green;
 $linkColorHover: #333;
 
+$android: #A4C639;
+$apple: #B9BFC1;
+$dropbox: #2281CF;
+$facebook: #3B5998;
+$github: #4183C4;
+$heroku: #6762A6;
+$instagram: #3F729B;
+$rails: #A62C39;
+$spotify: #80B719;
+$twitter: #39A9E0;
+
+
 @import "bootstrap";
 @import "bootstrap-responsive";
 @import "font-awesome";
@@ -25,6 +37,26 @@ $linkColorHover: #333;
 }
 
 /* Responsive */
+#technologies{
+  list-style: none;
+  margin-left: 0px;
+  text-align: center;
+  li{
+    display: inline;
+    margin-top: 3px;
+    img.android-tech { background-color: $android; }
+    img.apple-tech { background-color: $apple; }
+    img.dropbox-tech { background-color: $dropbox; }
+    img.facebook-tech { background-color: $facebook; }
+    img.github-tech { background-color: $github; }
+    img.heroku-tech { background-color: $heroku; }
+    img.instagram-tech { background-color: $instagram; }
+    img.rails-tech { background-color: $rails; }
+    img.spotify-tech { background-color: $spotify; }
+    img.twitter-tech { background-color: $twitter; }
+  }
+}
+
 @media (min-width: 980px){
   #wrapper{
     padding-top: 83px;
