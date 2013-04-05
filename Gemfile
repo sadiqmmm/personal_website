@@ -14,6 +14,7 @@ gem 'paperclip'
 gem 'paperclip-dropbox'
 gem 'truncate_html'
 gem 'friendly_id', "~> 4.0.9"
+gem "thin"
 
 
 group :development do
