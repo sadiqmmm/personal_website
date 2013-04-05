@@ -25,6 +25,9 @@
             <%= image_tag project.picture(:thumbnail) %>
             <p style="margin-top: 10px;">
               <%= link_to_unless project.url.empty?, "Visit project URL", project.url, class: "btn btn-block btn-success", target: "_blank" %>
+              <% if user_signed_in? and current_user.administrator %>
+                <%= link_to "Edit project", edit_project_path(project), class: "btn btn-block btn-warning" %>
+              <% end %>
             </p>
           </div>
         </div>
