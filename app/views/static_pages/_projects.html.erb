@@ -10,10 +10,16 @@
       </li>
     <% else %>
       <li class="span3">
-        <%= link_to project.url, target: "_blank" do %>
+        <% if project.url.empty? %>
           <div class="thumbnail">
             <%= image_tag project.picture(:thumbnail) %>
           </div>
+        <% else %>
+          <%= link_to project.url, target: "_blank" do %>
+            <div class="thumbnail">
+              <%= image_tag project.picture(:thumbnail) %>
+            </div>
+          <% end %>
         <% end %>
       </li>
     <% end %>
