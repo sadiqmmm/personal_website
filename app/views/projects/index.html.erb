@@ -8,7 +8,7 @@
             <%= image_tag project.picture(:thumbnail) %>
             <p style="margin-top: 10px;">
 
-              <%= link_to "Visit project URL", project.url, class: "btn btn-block btn-success", target: "_blank" unless project.url.empty? %>
+              <%= link_to "Visit project URL", project.url, class: "btn btn-block btn-success", target: "_blank" unless project.url.eql?("") %>
             </p>
           </div>
           <div class="span9">

@@ -10,7 +10,7 @@
       </li>
     <% else %>
       <li class="span3">
-        <% if project.url.empty? %>
+        <% if project.url.eql?("") %>
           <div class="thumbnail">
             <%= image_tag project.picture(:thumbnail) %>
           </div>
