@@ -3,7 +3,8 @@
     <div class="row-fluid">
       <div class="span9">
         <div class="root-link">
-          <%= link_to root_path do %>
+          <%= link_to root_path, "data-toggle" => "tooltip", "data-placement" => "right", 
+                        title: "Sometimes I pretend to be normal, but then it gets boring. So I go back and being me. =)" do %>
             <%= image_tag "jorge-coca.png" %>
             <span> Jorge Coca</span>
           <% end %>
