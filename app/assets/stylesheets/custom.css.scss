@@ -97,7 +97,6 @@ $twitter: #39A9E0;
 /* Code */
 
 body{
-  background-image: url("/assets/background.gif");
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
 }
@@ -173,7 +172,7 @@ input:focus, textarea:focus{
 }
 
 #white-footer{
-  background-color: #fff;
+  background-image: url("/assets/background.gif");
   border-top: 1px solid #ccc;
   #info-footer{
     margin-top: 15px;
