@@ -2,10 +2,16 @@
   <% @last_projects.each_with_index do |project, index| %>
     <% if index == 0 %>
       <li class="span6">
-        <%= link_to project.url, target: "_blank" do %>
+        <% if project.url.eql?("") %>
           <div class="thumbnail">
             <%= image_tag project.picture(:main) %>
           </div>
+        <% else %>
+          <%= link_to project.url, target: "_blank" do %>
+            <div class="thumbnail">
+              <%= image_tag project.picture(:main) %>
+            </div>
+          <% end %>
         <% end %>
       </li>
     <% else %>
