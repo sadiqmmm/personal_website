@@ -1,29 +1,39 @@
-<% @articles.each do |article| %>
+<% if @articles.count.eql?(0) %>
   <div class="row-fluid">
     <div class="span12">
-      <h1><%= link_to article.title, article %></h1>
-      <p>
-        <i class="icon-calendar"></i> <%=   article.created_at.strftime("%d %b. %Y") %> | 
-        <%= link_to article_path( article, anchor: "comments") do %>
-          <i class="icon-comment"></i> <%= pluralize( article.comments.count, "comment") %>
-        <% end %> | <i class="icon-group"></i> Visits: <%= article.visits %>
-      </p>
-      <div>
-        <%= image_tag article.picture(:header) %>
-      </div>
-      <hr/>
-      <p class="summary">
-        <%= article.summary %>
-      </p>
-      <hr/>
-      <div class="article-content">
-        <%= truncate_html article.content, length: 500, omission: "...(continued)" %>
-      </div>
-      <div class="read-more" style="margin-top: 15px; margin-bottom: 15px; text-align: right;">
-        <%= link_to article, class: "btn btn-success" do %>
-          <i class="icon-eye-open"></i> Read More
-        <% end %>
+      <div class="alert alert-info">
+        <h3>No articles were found</h3>
       </div>
     </div>
   </div>
+<% else %>
+  <% @articles.each do |article| %>
+    <div class="row-fluid">
+      <div class="span12">
+        <h1><%= link_to article.title, article %></h1>
+        <p>
+          <i class="icon-calendar"></i> <%=   article.created_at.strftime("%d %b. %Y") %> | 
+          <%= link_to article_path( article, anchor: "comments") do %>
+            <i class="icon-comment"></i> <%= pluralize( article.comments.count, "comment") %>
+          <% end %> | <i class="icon-group"></i> Visits: <%= article.visits %>
+        </p>
+        <div>
+          <%= image_tag article.picture(:header) %>
+        </div>
+        <hr/>
+        <p class="summary">
+          <%= article.summary %>
+        </p>
+        <hr/>
+        <div class="article-content">
+          <%= truncate_html article.content, length: 500, omission: "...(continued)" %>
+        </div>
+        <div class="read-more" style="margin-top: 15px; margin-bottom: 15px; text-align: right;">
+          <%= link_to article, class: "btn btn-success" do %>
+            <i class="icon-eye-open"></i> Read More
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 <% end %>

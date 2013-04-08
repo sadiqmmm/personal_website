@@ -16,4 +16,12 @@ class Article < ActiveRecord::Base
     storage: :dropbox,
     styles: { header: "770x400!" },
     dropbox_credentials: "#{Rails.root}/config/dropbox.yml"
+
+  def self.search(search)
+    if search
+      where("title like ?", "%#{search}%")
+    else
+      order(:created_at)
+    end
+  end
 end

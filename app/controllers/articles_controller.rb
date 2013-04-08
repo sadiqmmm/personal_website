@@ -5,7 +5,9 @@ class ArticlesController < ApplicationController
   after_filter :count_visits, only: :show
 
   def index
-    if params[:category_id].nil? or params[:category_id].empty?
+    if params[:search]
+      @articles = Article.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 6)
+    elsif params[:category_id].nil? or params[:category_id].empty?
       @articles = Article.order("created_at DESC").paginate(page: params[:page], per_page: 6)
     else
       @articles = Category.find(params[:category_id]).articles.order("created_at DESC").paginate(page: params[:page], per_page: 6)
