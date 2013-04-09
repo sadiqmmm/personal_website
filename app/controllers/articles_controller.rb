@@ -4,6 +4,8 @@ class ArticlesController < ApplicationController
   before_filter :sidebar, only: [:index, :show]
   after_filter :count_visits, only: :show
 
+  respond_to :json, :xml, only: [:show, :index] # Only for show and index actions
+
   def index
     if params[:search]
       @articles = Article.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 6)

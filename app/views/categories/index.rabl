@@ -1,0 +1,3 @@
+object @categories
+
+attributes :name

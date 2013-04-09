@@ -16,6 +16,11 @@ gem 'truncate_html'
 gem 'friendly_id', "~> 4.0.9"
 gem "thin"
 
+# RABL for JSON API
+gem 'rabl'
+# Also add either `oj` or `yajl-ruby` as the JSON parser
+gem 'oj'
+
 
 group :development do
   gem 'sqlite3'

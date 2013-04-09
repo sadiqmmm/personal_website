@@ -5,7 +5,7 @@ PersonalWebsite::Application.routes.draw do
   resources :messages, only: :create # Contact Me
   resources :songs, only: [:index, :new, :create]
   resources :articles, except: :destroy
-  resources :categories, only: [:new, :create] do
+  resources :categories, only: [:index, :new, :create] do
     resources :articles, only: [:index, :show]
   end
   resources :comments, only: [:index, :new, :create]

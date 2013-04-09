@@ -2,6 +2,12 @@ class CategoriesController < ApplicationController
   before_filter :authenticate_user!
   before_filter :administrator
 
+  respond_to :json, :xml, only: :index
+
+  def index
+    @categories = Category.all
+  end
+
   def new
     @category = Category.new
   end
