@@ -3,18 +3,18 @@
 This documentation explains how to consume web services for the website [www.jorgecoca.com]("http://www.jorgecoca.com")
 
 ##### Articles
-* [GET articles INDEX]("#articles_index")
-* [GET article SHOW]("#")
+* [GET articles INDEX]("https://github.com/jorgecoca/personal_website#articles_index")
+* [GET article SHOW]("https://github.com/jorgecoca/personal_website#article_show")
 
 ##### Categories
-* [GET categories INDEX]("#")
+* [GET categories INDEX]("https://github.com/jorgecoca/personal_website#categories_index")
 
 ##### Projects
-* [GET projects INDEX]("#")
+* [GET projects INDEX]("https://github.com/jorgecoca/personal_website#projects_index")
 
 ##### Songs
-* [GET songs INDEX]("#")
-* [GET song SHOW]("#")
+* [GET songs INDEX]("https://github.com/jorgecoca/personal_website#songs_index")
+* [GET song SHOW]("https://github.com/jorgecoca/personal_website#song_show")
 
 ---
 
