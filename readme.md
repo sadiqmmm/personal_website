@@ -22,7 +22,9 @@ This documentation explains how to consume web services for the website [www.jor
 
 To obtain a list with all the articles:
 
-	GET /articles.json
+<code>
+GET /articles.json
+</code>
 
 It will return:
 
@@ -53,7 +55,9 @@ It will return:
 
 To obtaine a singe record:
 
-	GET /articles/title-of-the-article.json
+<code>
+GET /articles/title-of-the-article.json
+</code>
 	
 It will return:
 	
