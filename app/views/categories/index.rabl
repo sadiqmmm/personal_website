@@ -1,3 +1,3 @@
 object @categories
 
-attributes :name
+attributes :name, :slug

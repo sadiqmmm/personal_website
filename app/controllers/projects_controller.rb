@@ -2,6 +2,8 @@ class ProjectsController < ApplicationController
 
   before_filter :authenticate_user!, except: :index
 
+  respond_to :json, :xml, only: :index
+
   def index
     @projects  = Project.order("created_at DESC").paginate(page: params[:page], per_page: 5)
   end

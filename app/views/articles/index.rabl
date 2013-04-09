@@ -1,6 +1,6 @@
 object @articles
 
-attributes :title, :summary, :picture, :visits
+attributes :title, :slug, :summary, :picture, :visits
 
 # Return the date in a nicer format: 09 Apr. 2013
 node :date do |article|

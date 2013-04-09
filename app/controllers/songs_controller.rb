@@ -3,6 +3,8 @@ class SongsController < ApplicationController
   before_filter :authenticate_user!, except: :index
   before_filter :administrator, except: :index
 
+  respond_to :json, :xml, only: :index
+
   def index
     @songs = Song.order("created_at DESC").paginate(page: params[:page], per_page: 8)
   end
